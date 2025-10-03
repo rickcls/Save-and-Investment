@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use Your Money: Saving vs Investment Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <div class="nav-brand">💰 Money Guide HK</div>
+            <ul class="nav-links">
+                <li><a href="#title" class="nav-link active">Home</a></li>
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#saving" class="nav-link">Saving</a></li>
+                <li><a href="#investment" class="nav-link">Investment</a></li>
+                <li><a href="#examples" class="nav-link">Examples</a></li>
+                <li><a href="#takeaways" class="nav-link">Action Steps</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Title Section -->
+    <section id="title" class="section title-section">
+        <div class="container">
+            <div class="title-content">
+                <h1 class="main-title">How to Use Your Money</h1>
+                <p class="subtitle">A Complete Guide to Saving & Investment for Hong Kong</p>
+                <div class="title-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-number" data-target="25">25x</div>
+                        <div class="highlight-text">Annual expenses needed for retirement</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-number" data-target="8.6">HK$8.6M</div>
+                        <div class="highlight-text">Comfortable retirement fund</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-number" data-target="20">20%</div>
+                        <div class="highlight-text">Recommended saving rate</div>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--lg scroll-down-btn" data-target="#overview">Start Planning</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section overview-section">
+        <div class="container">
+            <h2 class="section-title">The Two-Part Approach</h2>
+            <div class="overview-content">
+                <div class="approach-intro">
+                    <p>Smart money management has two essential components: <strong>saving for security</strong> and <strong>investing for growth</strong>. This guide shows you exactly how much you need for each, with real Hong Kong examples.</p>
+                </div>
+                <div class="approach-parts">
+                    <div class="part-card saving-card">
+                        <div class="part-icon">🛡️</div>
+                        <h3>PART 1: SAVING</h3>
+                        <p>How much is enough for retirement?</p>
+                        <ul>
+                            <li>4% rule explained</li>
+                            <li>Hong Kong retirement needs</li>
+                            <li>Age-based targets</li>
+                            <li>Emergency fund planning</li>
+                        </ul>
+                        <button class="btn btn--outline" data-target="#saving">Explore Saving →</button>
+                    </div>
+                    <div class="part-card investment-card">
+                        <div class="part-icon">📈</div>
+                        <h3>PART 2: INVESTMENT</h3>
+                        <p>How much should you invest monthly?</p>
+                        <ul>
+                            <li>Dollar-cost averaging</li>
+                            <li>Monthly investment amounts</li>
+                            <li>Compound growth examples</li>
+                            <li>Income-based strategies</li>
+                        </ul>
+                        <button class="btn btn--outline" data-target="#investment">Explore Investment →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Saving Section -->
+    <section id="saving" class="section saving-section">
+        <div class="container">
+            <h2 class="section-title">💰 PART 1: SAVING</h2>
+            <div class="saving-content">
+                <div class="four-percent-rule">
+                    <div class="rule-explanation">
+                        <h3>The 4% Rule</h3>
+                        <p>Withdraw 4% of your retirement savings in the first year, then adjust for inflation each year. This means you need <strong>25 times your annual expenses</strong> to retire safely.</p>
+                        <div class="rule-formula">
+                            <strong>Annual Expenses × 25 = Required Retirement Fund</strong>
+                        </div>
+                    </div>
+                    <div class="rule-calculator">
+                        <h4>Retirement Calculator</h4>
+                        <div class="calculator-input">
+                            <label>Monthly Expenses (HK$):</label>
+                            <input type="number" id="monthlyExpenses" value="20000" class="form-control">
+                        </div>
+                        <div class="calculator-result">
+                            <div class="result-item">
+                                <span>Annual Expenses:</span>
+                                <span id="annualExpenses">HK$240,000</span>
+                            </div>
+                            <div class="result-item main-result">
+                                <span>Retirement Fund Needed:</span>
+                                <span id="retirementFund">HK$6,000,000</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Monthly Withdrawal (4%):</span>
+                                <span id="monthlyWithdrawal">HK$20,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lifestyle-targets">
+                    <h3>Hong Kong Retirement Targets</h3>
+                    <div class="targets-grid">
+                        <div class="target-card">
+                            <h4>Basic Lifestyle</h4>
+                            <div class="target-amount">HK$3.3M</div>
+                            <div class="target-details">
+                                <p>Monthly expenses: HK$11,000</p>
+                                <p>Essential needs covered</p>
+                            </div>
+                        </div>
+                        <div class="target-card">
+                            <h4>Moderate Lifestyle</h4>
+                            <div class="target-amount">HK$4.5M</div>
+                            <div class="target-details">
+                                <p>Monthly expenses: HK$15,000</p>
+                                <p>Comfortable living</p>
+                            </div>
+                        </div>
+                        <div class="target-card featured">
+                            <h4>Comfortable Lifestyle</h4>
+                            <div class="target-amount">HK$8.1M</div>
+                            <div class="target-details">
+                                <p>Monthly expenses: HK$27,000</p>
+                                <p>Dining out, entertainment</p>
+                            </div>
+                        </div>
+                        <div class="target-card">
+                            <h4>Affluent Lifestyle</h4>
+                            <div class="target-amount">HK$11.7M</div>
+                            <div class="target-details">
+                                <p>Monthly expenses: HK$39,000</p>
+                                <p>Travel, luxury spending</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="age-impact">
+                    <h3>Start Early: The Age Difference</h3>
+                    <div class="age-comparison">
+                        <div class="age-scenario">
+                            <h4>Start at Age 25</h4>
+                            <div class="scenario-stats">
+                                <div class="stat">40 years to invest</div>
+                                <div class="stat highlight">HK$900/month needed</div>
+                                <div class="stat">Total contributed: HK$432,000</div>
+                            </div>
+                        </div>
+                        <div class="vs-divider">VS</div>
+                        <div class="age-scenario">
+                            <h4>Start at Age 35</h4>
+                            <div class="scenario-stats">
+                                <div class="stat">30 years to invest</div>
+                                <div class="stat highlight warning">HK$1,700/month needed</div>
+                                <div class="stat">Total contributed: HK$612,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="age-insight">
+                        <p><strong>Key Insight:</strong> Starting 10 years later nearly doubles your monthly requirement!</p>
+                    </div>
+                </div>
+
+                <div class="two-x-principle">
+                    <h3>The 2x Principle: Guilt-Free Spending</h3>
+                    <div class="principle-explanation">
+                        <p>This is Nick Maggiulli's rule for enjoying life while building wealth: <strong>every time you splurge on something you love, save or invest an equal amount</strong>.</p>
+                        <div class="principle-formula">
+                            <strong>Splurge on HK$1,000 → Save HK$2,000 (2x)</strong>
+                        </div>
+                        <p>This approach helps you build wealth while enjoying life without regret. Whether it's your favorite hobby, dining out, or a special purchase, you can indulge knowing you're simultaneously growing your nest egg.</p>
+                    </div>
+                    <div class="principle-example">
+                        <h4>How It Works in Practice</h4>
+                        <div class="example-scenario">
+                            <div class="example-item">
+                                <div class="example-label">Your monthly splurges:</div>
+                                <div class="example-value">HK$1,000</div>
+                            </div>
+                            <div class="example-arrow">↓</div>
+                            <div class="example-item highlight-2x">
+                                <div class="example-label">Required savings (2x):</div>
+                                <div class="example-value">HK$2,000</div>
+                            </div>
+                            <div class="example-arrow">↓</div>
+                            <div class="example-item">
+                                <div class="example-label">Result:</div>
+                                <div class="example-value">Wealth growth + Life enjoyment</div>
+                            </div>
+                        </div>
+                        <div class="principle-benefit">
+                            <p><strong>The Psychology:</strong> This principle removes guilt from spending on things you love. Instead of feeling bad about treating yourself, you feel motivated knowing you're also investing in your future. It's a win-win approach that makes saving feel less like a sacrifice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="investment" class="section investment-section">
+        <div class="container">
+            <h2 class="section-title">📈 PART 2: INVESTMENT</h2>
+            <div class="investment-content">
+                <div class="dca-explanation">
+                    <h3>Dollar-Cost Averaging Strategy</h3>
+                    <p>Invest a fixed amount regularly, regardless of market conditions. This strategy reduces the impact of volatility and often results in a lower average cost per share.</p>
+                    
+                    <div class="dca-chart-container">
+                        <h4>6-Month DCA Example: HK$1,000/month</h4>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="dcaChart"></canvas>
+                        </div>
+                        <div class="dca-summary">
+                            <div class="dca-stat">
+                                <span>Total Invested:</span>
+                                <span>HK$6,000</span>
+                            </div>
+                            <div class="dca-stat">
+                                <span>Average Cost:</span>
+                                <span>HK$96.77</span>
+                            </div>
+                            <div class="dca-stat">
+                                <span>Market Average:</span>
+                                <span>HK$97.50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="investment-calculator">
+                    <h3>Monthly Investment Calculator</h3>
+                    <div class="calculator-controls">
+                        <div class="input-group">
+                            <label>Monthly Investment (HK$):</label>
+                            <input type="number" id="monthlyInvestment" value="1000" class="form-control">
+                        </div>
+                        <div class="input-group">
+                            <label>Investment Period (years):</label>
+                            <input type="number" id="investmentPeriod" value="30" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="returns-scenarios">
+                        <div class="scenario conservative">
+                            <h4>Conservative (3% return)</h4>
+                            <div class="scenario-result">
+                                <div class="final-value" id="conservative-result">HK$581,140</div>
+                                <div class="total-gain" id="conservative-gain">+HK$221,140</div>
+                            </div>
+                        </div>
+                        <div class="scenario moderate">
+                            <h4>Moderate (6% return)</h4>
+                            <div class="scenario-result">
+                                <div class="final-value" id="moderate-result">HK$1,004,436</div>
+                                <div class="total-gain" id="moderate-gain">+HK$644,436</div>
+                            </div>
+                        </div>
+                        <div class="scenario optimistic">
+                            <h4>Optimistic (10% return)</h4>
+                            <div class="scenario-result">
+                                <div class="final-value" id="optimistic-result">HK$2,260,524</div>
+                                <div class="total-gain" id="optimistic-gain">+HK$1,900,524</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="investment-amounts">
+                    <h3>Recommended Investment by Income</h3>
+                    <div class="amounts-grid">
+                        <div class="amount-card">
+                            <div class="income-level">HK$30,000/month</div>
+                            <div class="investment-breakdown">
+                                <div class="breakdown-item">
+                                    <span>MPF:</span>
+                                    <span>HK$3,000</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Investment:</span>
+                                    <span>HK$2,000</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Emergency:</span>
+                                    <span>HK$1,000</span>
+                                </div>
+                                <div class="breakdown-total">
+                                    <span>Total Saving:</span>
+                                    <span>HK$6,000 (20%)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="amount-card">
+                            <div class="income-level">HK$50,000/month</div>
+                            <div class="investment-breakdown">
+                                <div class="breakdown-item">
+                                    <span>MPF:</span>
+                                    <span>HK$5,000</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Investment:</span>
+                                    <span>HK$3,500</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Emergency:</span>
+                                    <span>HK$1,500</span>
+                                </div>
+                                <div class="breakdown-total">
+                                    <span>Total Saving:</span>
+                                    <span>HK$10,000 (20%)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="amount-card">
+                            <div class="income-level">HK$70,000/month</div>
+                            <div class="investment-breakdown">
+                                <div class="breakdown-item">
+                                    <span>MPF:</span>
+                                    <span>HK$7,000</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Investment:</span>
+                                    <span>HK$5,000</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Emergency:</span>
+                                    <span>HK$2,000</span>
+                                </div>
+                                <div class="breakdown-total">
+                                    <span>Total Saving:</span>
+                                    <span>HK$14,000 (20%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="investment-products">
+                    <h3>Investment Products from "Just Keep Buying"</h3>
+                    <div class="products-intro">
+                        <p>Based on Nick Maggiulli's book, <strong>"Just Keep Buying"</strong>, he recommends focusing on diversified, income-producing assets with a long-term view. He emphasizes simple, low-effort options like index funds over complex strategies.</p>
+                    </div>
+
+                    <!-- Stock Products Section -->
+                    <div class="product-category collapsible-section">
+                        <div class="category-header collapsible-header" data-section="stocks">
+                            <h4>📊 STOCK PRODUCTS (For Long-Term Growth)</h4>
+                            <button class="collapse-btn" aria-label="Toggle section">
+                                <span class="collapse-icon">−</span>
+                            </button>
+                        </div>
+                        
+                        <div class="category-content">
+                            <div class="primary-recommendation">
+                                <h5>Primary Recommendation: Broad Market Index Funds</h5>
+                                <div class="recommendation-grid">
+                                    <div class="rec-card">
+                                        <strong>U.S. Total Market Index Funds</strong>
+                                        <p>Examples: Vanguard Total Stock Market (VTI) - captures entire U.S. market</p>
+                                    </div>
+                                    <div class="rec-card">
+                                        <strong>S&P 500 Index Funds</strong>
+                                        <p>Low-cost funds tracking 500 largest U.S. companies</p>
+                                    </div>
+                                    <div class="rec-card">
+                                        <strong>International/Global Stock Index</strong>
+                                        <p>For geographic diversification beyond U.S. markets</p>
+                                    </div>
+                                </div>
+                                <div class="why-these">
+                                    <strong>Why these?</strong> Low fees (0.03-0.10% annually), automatic diversification across hundreds/thousands of companies, historically strong long-term returns
+                                </div>
+                            </div>
+
+                            <div class="avoid-section">
+                                <h5>⚠️ What to AVOID:</h5>
+                                <ul class="avoid-list">
+                                    <li><strong>Individual stock picking</strong> - Higher risk and lower returns for most investors</li>
+                                    <li><strong>Actively managed funds</strong> - Higher fees with no proven advantage</li>
+                                    <li><strong>Market timing strategies</strong> - Data shows consistent buying beats timing</li>
+                                </ul>
+                            </div>
+
+                            <div class="allocation-approach">
+                                <h5>Allocation Approach:</h5>
+                                <ul class="approach-list">
+                                    <li>Use <strong>dollar-cost averaging</strong>: Invest same amount regularly (monthly/biweekly) regardless of market conditions</li>
+                                    <li>Never sell except for rebalancing or retirement</li>
+                                    <li>Think of stocks as the <strong>growth engine</strong> of your portfolio</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Money Products Section -->
+                    <div class="product-category collapsible-section">
+                        <div class="category-header collapsible-header" data-section="money">
+                            <h4>💰 MONEY PRODUCTS (For Safety and Short-Term Goals)</h4>
+                            <button class="collapse-btn" aria-label="Toggle section">
+                                <span class="collapse-icon">−</span>
+                            </button>
+                        </div>
+                        
+                        <div class="category-content">
+                            <div class="money-type">
+                                <h5>Cash Products (For 0-3 Years)</h5>
+                                <div class="money-details">
+                                    <div class="money-options">
+                                        <p><strong>High-yield savings accounts:</strong> For emergency funds and goals within 2-3 years</p>
+                                        <p><strong>Money market funds:</strong> Safe, liquid, similar to savings accounts</p>
+                                    </div>
+                                    <div class="when-use">
+                                        <strong>When to use:</strong> Emergency fund (3-6 months expenses), purchases planned within 2-3 years, short-term safety
+                                    </div>
+                                    <div class="why-use">
+                                        <strong>Why:</strong> Zero risk of principal loss, immediate liquidity, but loses purchasing power to inflation over time
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="money-type">
+                                <h5>Bond Products (For 3+ Years and Portfolio Stability)</h5>
+                                <div class="money-details">
+                                    <div class="money-options">
+                                        <p><strong>Bond Index Funds/ETFs:</strong> Easier than buying individual bonds</p>
+                                        <p><strong>Government bonds:</strong> U.S. Treasury bonds, very safe</p>
+                                        <p><strong>Investment-grade corporate bonds:</strong> Higher yield, still relatively safe</p>
+                                    </div>
+                                    <div class="when-use">
+                                        <strong>When to use:</strong> Saving for purchases 3+ years away, reducing portfolio volatility as you near retirement, balancing stock risk
+                                    </div>
+                                    <div class="why-use">
+                                        <strong>Why:</strong> Provide stability, typically move opposite to stocks (negative correlation), generate income
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="decision-rule">
+                                <h5>Cash vs Bonds Decision Rule:</h5>
+                                <div class="rule-grid">
+                                    <div class="rule-item">
+                                        <div class="rule-time">Less than 2 years:</div>
+                                        <div class="rule-action">Use cash only</div>
+                                    </div>
+                                    <div class="rule-item">
+                                        <div class="rule-time">2-3 years:</div>
+                                        <div class="rule-action">Use cash</div>
+                                    </div>
+                                    <div class="rule-item highlight-rule">
+                                        <div class="rule-time">3+ years:</div>
+                                        <div class="rule-action">Start using bonds</div>
+                                    </div>
+                                </div>
+                                <p class="rule-reason"><strong>Reason:</strong> Bonds can fluctuate in value short-term but outperform cash over longer periods</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Allocation by Age -->
+                    <div class="asset-allocation-section collapsible-section">
+                        <div class="section-header-interactive">
+                            <h4>🎯 Asset Allocation: How Much in Each?</h4>
+                            <button class="collapse-btn" aria-label="Toggle section">
+                                <span class="collapse-icon">−</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Interactive Age Slider -->
+                        <div class="interactive-allocation">
+                            <h5>Try It: Adjust Your Age</h5>
+                            <div class="age-slider-container">
+                                <label for="ageSlider">Your Age: <span id="currentAge" class="age-display">35</span></label>
+                                <input type="range" id="ageSlider" min="20" max="70" value="35" class="age-slider">
+                                <div class="age-marks">
+                                    <span>20</span>
+                                    <span>30</span>
+                                    <span>40</span>
+                                    <span>50</span>
+                                    <span>60</span>
+                                    <span>70</span>
+                                </div>
+                            </div>
+                            <div class="dynamic-allocation">
+                                <div class="allocation-result">
+                                    <div class="result-bar-container">
+                                        <div class="result-bar stocks-bar">
+                                            <span class="bar-label">Stocks</span>
+                                            <span class="bar-percent" id="stocksPercent">65%</span>
+                                        </div>
+                                        <div class="result-bar bonds-bar">
+                                            <span class="bar-label">Bonds/Cash</span>
+                                            <span class="bar-percent" id="bondsPercent">35%</span>
+                                        </div>
+                                    </div>
+                                    <div class="allocation-explanation" id="allocationExplanation">
+                                        At age 35, maintain higher stock allocation for growth while building some stability.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="allocation-by-age">
+                            <div class="age-allocation-card">
+                                <h5>Younger Investors (20s-30s)</h5>
+                                <div class="allocation-bars">
+                                    <div class="allocation-bar">
+                                        <div class="bar-fill stocks" style="width: 85%">80-90% Stocks</div>
+                                    </div>
+                                    <div class="allocation-bar">
+                                        <div class="bar-fill bonds" style="width: 15%">10-20% Bonds/Cash</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="age-allocation-card">
+                                <h5>Mid-Career (40s-50s)</h5>
+                                <div class="allocation-bars">
+                                    <div class="allocation-bar">
+                                        <div class="bar-fill stocks" style="width: 65%">60-70% Stocks</div>
+                                    </div>
+                                    <div class="allocation-bar">
+                                        <div class="bar-fill bonds" style="width: 35%">30-40% Bonds/Cash</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="age-allocation-card">
+                                <h5>Near Retirement (60+)</h5>
+                                <div class="allocation-bars">
+                                    <div class="allocation-bar">
+                                        <div class="bar-fill stocks" style="width: 45%">40-50% Stocks</div>
+                                    </div>
+                                    <div class="allocation-bar">
+                                        <div class="bar-fill bonds" style="width: 55%">50-60% Bonds/Cash</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="allocation-example">
+                            <h5>Example Portfolio for Hong Kong Professional (Age 35):</h5>
+                            <div class="example-portfolio">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-percent">70% Stocks</div>
+                                    <div class="portfolio-desc">HK$7,000/month into global stock index funds (VT or similar)</div>
+                                </div>
+                                <div class="portfolio-item">
+                                    <div class="portfolio-percent">20% Bonds</div>
+                                    <div class="portfolio-desc">HK$2,000/month into bond index funds for stability</div>
+                                </div>
+                                <div class="portfolio-item">
+                                    <div class="portfolio-percent">10% Cash</div>
+                                    <div class="portfolio-desc">HK$1,000/month building emergency fund (until 6 months expenses saved)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Individual Stocks vs ETFs -->
+                    <div class="stocks-vs-etfs collapsible-section">
+                        <div class="section-header-interactive">
+                            <h4>🔍 Individual Stocks vs ETFs: The Complete Breakdown</h4>
+                            <button class="collapse-btn" aria-label="Toggle section">
+                                <span class="collapse-icon">−</span>
+                            </button>
+                        </div>
+                        
+                        <div class="comparison-intro">
+                            <div class="def-box">
+                                <h5>What Are Individual Stocks?</h5>
+                                <p>When you buy an individual stock, you're purchasing ownership in <strong>ONE specific company</strong>. Example: Buying Apple stock means you only own Apple. If that company fails, you could lose everything.</p>
+                            </div>
+                            <div class="def-box">
+                                <h5>What Are ETFs (Exchange Traded Funds)?</h5>
+                                <p>An ETF is a <strong>basket containing hundreds or thousands of individual stocks</strong> bundled together. Example: VTI contains over 3,000 U.S. companies. You buy ONE share and own ALL companies inside.</p>
+                            </div>
+                        </div>
+
+                        <div class="comparison-table-container">
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th class="individual-col">Individual Stocks</th>
+                                        <th class="etf-col">ETFs</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Diversification</strong></td>
+                                        <td class="individual-col">Zero - all eggs in one basket</td>
+                                        <td class="etf-col">✓ High - hundreds to thousands of companies</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Risk</strong></td>
+                                        <td class="individual-col">Very high - one company can go to zero</td>
+                                        <td class="etf-col">✓ Lower - spread across many companies</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Research Required</strong></td>
+                                        <td class="individual-col">Extensive - study financials, management, industry</td>
+                                        <td class="etf-col">✓ Minimal - automatically diversified</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Time Commitment</strong></td>
+                                        <td class="individual-col">Hours per week monitoring</td>
+                                        <td class="etf-col">✓ Minutes per month</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Potential Returns</strong></td>
+                                        <td class="individual-col">Could be huge OR lose everything</td>
+                                        <td class="etf-col">✓ Matches market average (7-10% annually)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Cost</strong></td>
+                                        <td class="individual-col">Low trading fees but high risk cost</td>
+                                        <td class="etf-col">✓ Small annual fee (0.03-0.20%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Recommended For</strong></td>
+                                        <td class="individual-col">Experienced investors with time & expertise</td>
+                                        <td class="etf-col">✓ Most investors, especially beginners</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="why-etfs">
+                            <h5>Why "Just Keep Buying" Recommends ETFs Over Individual Stocks:</h5>
+                            <div class="reasons-grid">
+                                <div class="reason-card">
+                                    <strong>1. Individual Stock Picking Usually LOSES</strong>
+                                    <p>80-90% of professional fund managers fail to beat index ETFs over 10+ years. If pros can't beat the market, individual investors have even worse odds.</p>
+                                </div>
+                                <div class="reason-card">
+                                    <strong>2. Concentration Risk is Dangerous</strong>
+                                    <p>Even "safe" companies can collapse: Enron, Lehman Brothers, GE fell 90%. ETFs automatically drop failing companies and add new winners.</p>
+                                </div>
+                                <div class="reason-card">
+                                    <strong>3. Time and Expertise</strong>
+                                    <p>Stock picking requires 10-20 hours/week of research. ETFs let you focus on your career—earning more money matters more.</p>
+                                </div>
+                                <div class="reason-card">
+                                    <strong>4. Emotional Discipline</strong>
+                                    <p>When your stock drops 50%, panic selling is common. ETFs are less volatile, easier to hold through downturns.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specific ETF Recommendations -->
+                    <div class="etf-recommendations collapsible-section">
+                        <div class="section-header-interactive">
+                            <h4>🎯 Specific ETF Recommendations for Hong Kong Investors</h4>
+                            <button class="collapse-btn" aria-label="Toggle section">
+                                <span class="collapse-icon">−</span>
+                            </button>
+                        </div>
+                        
+                        <div class="etf-categories">
+                            <div class="etf-category">
+                                <h5>U.S. Market ETFs</h5>
+                                <div class="etf-list">
+                                    <div class="etf-item">
+                                        <div class="etf-name">VTI - Vanguard Total Stock Market</div>
+                                        <div class="etf-details">3,600+ U.S. companies | Fee: 0.03%</div>
+                                    </div>
+                                    <div class="etf-item">
+                                        <div class="etf-name">VOO - Vanguard S&P 500</div>
+                                        <div class="etf-details">500 largest U.S. companies | Fee: 0.03%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="etf-category">
+                                <h5>Global Market ETFs</h5>
+                                <div class="etf-list">
+                                    <div class="etf-item featured-etf">
+                                        <div class="etf-name">VT - Vanguard Total World Stock</div>
+                                        <div class="etf-details">9,000+ companies worldwide, includes U.S. + international</div>
+                                    </div>
+                                    <div class="etf-item">
+                                        <div class="etf-name">VXUS - Vanguard Total International Stock</div>
+                                        <div class="etf-details">Non-U.S. companies only</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="etf-category">
+                                <h5>Hong Kong-Listed Options</h5>
+                                <div class="etf-list">
+                                    <div class="etf-item">
+                                        <div class="etf-name">2800.HK - Tracker Fund</div>
+                                        <div class="etf-details">Tracks Hang Seng Index</div>
+                                    </div>
+                                    <div class="etf-item">
+                                        <div class="etf-name">3140.HK - iShares Core S&P 500</div>
+                                        <div class="etf-details">Hong Kong-listed S&P 500 ETF</div>
+                                    </div>
+                                    <div class="etf-item">
+                                        <div class="etf-name">9081.HK - Vanguard Total World Stock ETF</div>
+                                        <div class="etf-details">Global exposure</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Practical Example -->
+                    <div class="practical-example collapsible-section">
+                        <div class="section-header-interactive">
+                            <h4>💡 Practical Example: Why ETFs Win</h4>
+                            <button class="collapse-btn" aria-label="Toggle section">
+                                <span class="collapse-icon">−</span>
+                            </button>
+                        </div>
+                        <div class="example-comparison">
+                            <div class="example-scenario-card">
+                                <h5>Scenario: You have HK$10,000 to invest</h5>
+                                <div class="scenario-options">
+                                    <div class="option-card warning-option">
+                                        <h6>Option A: Buy Individual Stocks</h6>
+                                        <ul>
+                                            <li>Buy 2-3 stocks (Alibaba, Tencent, HSBC)</li>
+                                            <li>If Alibaba drops 50% (like 2021-2022), you lose HK$1,700+</li>
+                                            <li>Requires constant monitoring</li>
+                                            <li class="risk-high">Risk: High</li>
+                                        </ul>
+                                        <div class="result-bad">30-Year Result: 70% chance you underperform the market</div>
+                                    </div>
+                                    <div class="option-card success-option">
+                                        <h6>Option B: Buy ETF ✓</h6>
+                                        <ul>
+                                            <li>Buy VT (Total World Stock ETF)</li>
+                                            <li>You instantly own 9,000+ companies globally</li>
+                                            <li>If Alibaba drops 50%, it's only 0.3% of portfolio (loss = HK$15)</li>
+                                            <li>No monitoring needed, just "keep buying" monthly</li>
+                                            <li class="risk-low">Risk: Low</li>
+                                        </ul>
+                                        <div class="result-good">30-Year Result: 100% chance you match market returns (avg 8-10% annually)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Strategy -->
+                    <div class="products-key-insight">
+                        <div class="insight-box">
+                            <h4>💡 "Just Keep Buying" Strategy: ETF-Based</h4>
+                            <p><strong>Monthly Investment Example:</strong></p>
+                            <ul class="strategy-steps">
+                                <li>HK$1,000/month into VT (Total World Stock ETF)</li>
+                                <li>Invest same amount every month (dollar-cost averaging)</li>
+                                <li>Never sell, ignore market ups and downs</li>
+                                <li><strong>After 30 years at 8% return: HK$1.5 million</strong></li>
+                            </ul>
+                            <p class="final-message">This is the core of Maggiulli's philosophy: <strong>Keep buying broad market ETFs consistently, avoid individual stock picking.</strong> For 95% of investors, stick to ETFs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="section examples-section">
+        <div class="container">
+            <h2 class="section-title">💡 Real-World Examples</h2>
+            <div class="examples-content">
+                <div class="profile-examples">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>Sarah, 25 - Young Professional</h3>
+                            <div class="profile-income">Income: HK$30,000/month</div>
+                        </div>
+                        <div class="profile-strategy">
+                            <h4>Strategy: Build Foundation</h4>
+                            <div class="strategy-details">
+                                <div class="detail-item">
+                                    <span>Monthly Saving:</span>
+                                    <span>HK$6,000 (20%)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>Target Retirement Fund:</span>
+                                    <span>HK$8.1M (comfortable)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>Years to Retirement:</span>
+                                    <span>40 years</span>
+                                </div>
+                                <div class="detail-item highlight">
+                                    <span>Required Monthly Investment:</span>
+                                    <span>HK$900 (easily achievable!)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-outcome">
+                            <p><strong>Outcome:</strong> Starting early gives Sarah a huge advantage. She can achieve a comfortable retirement with just 3% of her income!</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>Michael, 35 - Mid-Career</h3>
+                            <div class="profile-income">Income: HK$50,000/month</div>
+                        </div>
+                        <div class="profile-strategy">
+                            <h4>Strategy: Catch-Up Mode</h4>
+                            <div class="strategy-details">
+                                <div class="detail-item">
+                                    <span>Monthly Saving:</span>
+                                    <span>HK$10,000 (20%)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>Target Retirement Fund:</span>
+                                    <span>HK$8.1M (comfortable)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>Years to Retirement:</span>
+                                    <span>30 years</span>
+                                </div>
+                                <div class="detail-item highlight warning">
+                                    <span>Required Monthly Investment:</span>
+                                    <span>HK$1,700 (need to prioritize!)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-outcome">
+                            <p><strong>Outcome:</strong> Michael needs to invest more aggressively but can still achieve his goals with disciplined saving.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>Linda, 45 - Senior Professional</h3>
+                            <div class="profile-income">Income: HK$70,000/month</div>
+                        </div>
+                        <div class="profile-strategy">
+                            <h4>Strategy: Final Push</h4>
+                            <div class="strategy-details">
+                                <div class="detail-item">
+                                    <span>Monthly Saving:</span>
+                                    <span>HK$14,000 (20%)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>Target Retirement Fund:</span>
+                                    <span>HK$8.1M (comfortable)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>Years to Retirement:</span>
+                                    <span>20 years</span>
+                                </div>
+                                <div class="detail-item highlight critical">
+                                    <span>Required Monthly Investment:</span>
+                                    <span>HK$3,300 (aggressive saving needed)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-outcome">
+                            <p><strong>Outcome:</strong> Linda must save aggressively but her higher income makes it possible. Consider maximizing investment returns.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-insights">
+                    <h3>Key Insights</h3>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <div class="insight-icon">⏰</div>
+                            <h4>Time is Everything</h4>
+                            <p>Starting 10 years earlier can reduce your required monthly investment by 50% or more.</p>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-icon">💰</div>
+                            <h4>Income Growth Matters</h4>
+                            <p>Focus on increasing your income alongside saving. Higher income provides more investment capacity.</p>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-icon">🎯</div>
+                            <h4>Consistency Beats Perfection</h4>
+                            <p>Regular monthly investments through dollar-cost averaging often outperform trying to time the market.</p>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-icon">📊</div>
+                            <h4>Lifestyle Inflation Control</h4>
+                            <p>As your income grows, resist increasing expenses proportionally. Save the difference.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Takeaways Section -->
+    <section id="takeaways" class="section takeaways-section">
+        <div class="container">
+            <h2 class="section-title">🎯 Action Steps</h2>
+            <div class="takeaways-content">
+                <div class="action-checklist">
+                    <h3>Your Financial Action Plan</h3>
+                    <div class="checklist-container">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="action1">
+                            <label for="action1">Calculate your retirement target using the 4% rule</label>
+                            <div class="action-help">Multiply your expected annual expenses by 25</div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="action2">
+                            <label for="action2">Set up automatic monthly investment transfers</label>
+                            <div class="action-help">Automate 10-20% of your income to investments</div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="action3">
+                            <label for="action3">Open an investment account with low-cost index funds</label>
+                            <div class="action-help">Choose broad market ETFs with expense ratios under 0.5%</div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="action4">
+                            <label for="action4">Build 6-month emergency fund in savings account</label>
+                            <div class="action-help">Keep liquid funds separate from investments</div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="action5">
+                            <label for="action5">Review and increase investment amount annually</label>
+                            <div class="action-help">Save at least 50% of salary increases</div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="action6">
+                            <label for="action6">Track your net worth monthly, not daily fluctuations</label>
+                            <div class="action-help">Focus on long-term progress, ignore short-term volatility</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h3>Ready to Start?</h3>
+                    <div class="steps-summary">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Calculate Your Numbers</h4>
+                                <p>Use our calculators to determine your retirement target and monthly investment needs.</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Set Up Automation</h4>
+                                <p>Automate your investments to remove emotion from the equation.</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Start Today</h4>
+                                <p>Even HK$500/month is better than waiting for the "perfect" time to start.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="final-cta">
+                        <p><strong>Remember:</strong> Time in the market beats timing the market. The best day to start was yesterday. The second best day is today.</p>
+                        <button class="btn btn--primary btn--lg action-btn">I'm Ready to Start Investing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
