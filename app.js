@@ -12,6 +12,8 @@ class FinancialApp {
         this.setupCollapsibleSections();
         this.setupInteractiveAllocation();
         this.setupAnimatedCounters();
+        this.setupTargetCards();
+        this.setupGoalCalculator();
         this.animateOnLoad();
     }
 
@@ -45,6 +47,7 @@ class FinancialApp {
         this.scrollDownBtn = document.querySelector('.scroll-down-btn');
         this.actionBtn = document.querySelector('.action-btn');
         this.checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+        this.targetCards = document.querySelectorAll('.target-card');
     }
 
     setupEventListeners() {
@@ -661,6 +664,133 @@ class FinancialApp {
         counters.forEach(counter => {
             observer.observe(counter);
         });
+    }
+
+    // Setup Interactive Target Cards
+    setupTargetCards() {
+        if (this.targetCards.length === 0 || !this.monthlyExpensesInput) return;
+
+        // Define monthly expenses for each lifestyle
+        const lifestyleExpenses = {
+            'Basic Lifestyle': 11000,
+            'Moderate Lifestyle': 15000,
+            'Comfortable Lifestyle': 27000,
+            'Affluent Lifestyle': 39000
+        };
+
+        this.targetCards.forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => {
+                // Get the lifestyle type from the card's h4
+                const lifestyleType = card.querySelector('h4')?.textContent;
+                const monthlyExpense = lifestyleExpenses[lifestyleType];
+
+                if (monthlyExpense && this.monthlyExpensesInput) {
+                    // Update the calculator input
+                    this.monthlyExpensesInput.value = monthlyExpense;
+                    
+                    // Trigger calculation
+                    this.calculateRetirement();
+
+                    // Visual feedback - remove 'selected' class from all cards
+                    this.targetCards.forEach(c => c.classList.remove('selected'));
+                    
+                    // Add 'selected' class to clicked card
+                    card.classList.add('selected');
+
+                    // Smooth scroll to calculator
+                    const calculator = document.querySelector('.four-percent-rule');
+                    if (calculator) {
+                        calculator.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+
+                    // Add animation to show it's working
+                    this.monthlyExpensesInput.style.transform = 'scale(1.05)';
+                    this.monthlyExpensesInput.style.transition = 'transform 0.2s';
+                    setTimeout(() => {
+                        this.monthlyExpensesInput.style.transform = 'scale(1)';
+                    }, 200);
+                }
+            });
+        });
+    }
+
+    // Setup Goal Calculator
+    setupGoalCalculator() {
+        const goalNameInput = document.getElementById('goalName');
+        const goalAmountInput = document.getElementById('goalAmount');
+        const goalYearsInput = document.getElementById('goalYears');
+        const timeRuleCards = document.querySelectorAll('.time-rule-card');
+
+        if (!goalAmountInput || !goalYearsInput) return;
+
+        const updateGoalRecommendation = () => {
+            const goalName = goalNameInput?.value || 'Your Goal';
+            const amount = parseFloat(goalAmountInput.value) || 100000;
+            const years = parseFloat(goalYearsInput.value) || 3;
+            const months = years * 12;
+
+            // Calculate monthly savings needed (simple division, no interest)
+            const monthlySaving = amount / months;
+
+            // Determine recommendation based on time frame
+            let vehicle, reason, vehicleColor;
+            
+            if (years < 2) {
+                vehicle = 'High-Yield Savings Account';
+                reason = 'For goals under 2 years, keep money in cash to avoid market volatility. Your capital is guaranteed.';
+                vehicleColor = '--color-info';
+            } else if (years < 3) {
+                vehicle = 'Cash Savings Account';
+                reason = 'For 2-3 year goals, cash remains safest. Market fluctuations could hurt your goal if you need the money soon.';
+                vehicleColor = '--color-info';
+            } else if (years < 5) {
+                vehicle = 'Bond Funds';
+                reason = 'For 3-5 year goals, bonds provide better returns than cash while remaining relatively safe. They have time to recover from short-term dips.';
+                vehicleColor = '--color-success';
+            } else {
+                vehicle = 'Balanced Portfolio (Stocks + Bonds)';
+                reason = 'For 5+ year goals, use a mix of stocks and bonds. You have enough time to ride out market volatility and benefit from higher stock returns.';
+                vehicleColor = '--color-warning';
+            }
+
+            // Update UI
+            document.getElementById('recGoalName').textContent = goalName;
+            document.getElementById('recAmount').textContent = `HK$${this.formatNumber(amount)}`;
+            document.getElementById('recTimeFrame').textContent = `${years} year${years !== 1 ? 's' : ''}`;
+            document.getElementById('recMonthlySaving').textContent = `HK$${this.formatNumber(monthlySaving)}`;
+            document.getElementById('recVehicle').textContent = vehicle;
+            document.getElementById('recReason').textContent = reason;
+
+            // Highlight the corresponding time rule card
+            timeRuleCards.forEach(card => {
+                const minYears = parseFloat(card.getAttribute('data-min-years'));
+                const maxYears = parseFloat(card.getAttribute('data-max-years'));
+                
+                if (years >= minYears && years < maxYears) {
+                    card.classList.add('active-rule');
+                } else {
+                    card.classList.remove('active-rule');
+                }
+            });
+
+            // Animate the recommendation box
+            const recBox = document.getElementById('goalRecommendation');
+            recBox.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                recBox.style.transform = 'scale(1)';
+            }, 200);
+        };
+
+        // Initial calculation
+        updateGoalRecommendation();
+
+        // Add event listeners
+        if (goalNameInput) {
+            goalNameInput.addEventListener('input', updateGoalRecommendation);
+        }
+        goalAmountInput.addEventListener('input', updateGoalRecommendation);
+        goalYearsInput.addEventListener('input', updateGoalRecommendation);
     }
 }
 
